@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<head>
+  <title>godaddy clone</title>
+  <style>
+    body {
+      margin: 0;
+    }
+    header {
+      position: relative;
+      right: 0;
+      top: 0;
+      z-index: 1000;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      background: black;
+      opacity: 0.8;
+      height: 60px;
+    }
+    #navbar ul {
+      margin: 0;
+      list-style-type: none;
+      padding: 5px;
+      text-align: right;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+    #navbar ul li {
+      display: inline;
+      margin-left: 50px;
+    }
+    #navbar ul li a {
+      text-decoration: none;
+      color: white;
+      font-size: 18px;
+    }
+    #navbar ul li a:hover {
+      color: #080808;
+      background-color: #929191;
+      border-radius: 10px;
+      padding: 10px;
+      text-align: center;
+    }
+    .logo {
+      font-size: 30px;
+      font-weight: 700;
+      margin-left: 80px;
+      display: inline;
+      color: white;
+    }
+    .menu {
+      display: inline;
+      margin-top: 0;
+    }
+    p {
+      font-size: xx-small;
+      margin-bottom: 0%;
+      margin-left: 60%;
+    }
+    #search {
+      display: flex;
+      margin-top: 0;
+      padding: 16px 51.16px;
+    }
+    input[type="text"] {
+      font-size: 22px;
+      display: inline;
+      width: 88%;
+      font-size: medium;
+      padding-top: 26px;
+      padding-bottom: 26px;
+      display: inline;
+      padding-left: 40px;
+      margin-top: 0px;
+    }
+
+    .main {
+      background-image: url(/ANGELA/IMAGES/row-mrq-hp-test-4-landscape-jpg.webp);
+      background-size: cover;
+      background-repeat: no-repeat;
+      margin: 0px 0px 0px 10px;
+      padding: 20px;
+      border-radius: 5px;
+      font-size: 110%;
+      padding-left: 40px;
+      display: flex;
+      width: 900px;
+      align-items: start;
+    }
+    .side-bar {
+      background-color: #d8efef;
+      margin: 0px 10px 10px 20px;
+
+      border-radius: 5px;
+      font-size: 110%;
+      width: 313px;
+      float: right;
+
+      clear: right;
+      display: inline;
+      height: 395px;
+    }
+    .finds {
+      color: white;
+      background-color: black;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      padding: 12px 48px;
+      border-color: none;
+      border-radius: 10px;
+      margin: 10px;
+      transition: 0.5s ease;
+      width: 228px;
+      height: 58px;
+      margin-left: 0;
+      position: absolute;
+    }
+
+    input:active {
+      border-color: lightblue;
+    }
+    input[type="submit"] {
+      height: 74px;
+      vertical-align: top;
+      color: white;
+      background-color: #09757a;
+      border: none;
+      margin: 0;
+      padding: 8px 16px;
+      left: -5px;
+      width: 205.28px;
+      position: relative;
+    }
+    .finder:hover {
+      background-color: #055357;
+    }
+    .rage {
+      height: 370px;
+      display: flex;
+      padding-left: 40px;
+    }
+    .promo {
+      padding: 30px;
+      width: 240px;
+    }
+    .h {
+      font-size: 16px;
+      margin-left: 0px;
+      font-weight: bold;
+    }
+    .w {
+      font-size: 12.68px;
+      margin-left: 0;
+    }
+    .img {
+      height: 60px;
+    }
+    .individual {
+      width: 24.6%;
+      height: 135px;
+      border: 1px solid rgb(160, 151, 151);
+      padding: 0;
+      margin: 0;
+      display: inline-block;
+      vertical-align: top;
+      left: -5px;
+      margin-left: -5px;
+      transition: 0.5s ease;
+    }
+    .individual:hover {
+      background-color: #080808;
+    }
+    .individual p:hover {
+      color: white;
+      margin-right: 30px;
+    }
+    .p {
+      transition: 0.5s ease;
+      position: relative;
+      -webkit-transform: translateY(-50%);
+      top: 50%;
+      transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      text-align: center;
+      margin-top: 0;
+      font-size: large;
+      text-align: center;
+      margin-left: 0;
+      padding: 49px;
+    }
+    .whole {
+      padding-right: 4%;
+
+      padding-left: 4%;
+      margin-top: 55px;
+    }
+    footer {
+      background-color: black;
+      margin: 0;
+      height: 100px;
+      clear: both;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 90%;
+      margin-top: 30px;
+    }
+    .find {
+      color: white;
+      background-color: black;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      padding: 12px 48px;
+      border-color: none;
+      border-radius: 10px;
+      margin: 10px;
+      transition: 0.5s ease;
+      width: 228px;
+      height: 58px;
+      margin-left: 0;
+    }
+    .find:hover {
+      padding-left: 10px;
+      background-color: black;
+    }
+    .finds:hover {
+      padding-left: 10px;
+      background-color: black;
+    }
+    .h6 {
+      margin-left: 0;
+      width: 190px;
+      font-size: 20px;
+      height: 170px;
+      margin-top: 20px;
+    }
+    .h1 {
+      margin-left: -3px;
+      width: 350px;
+      margin-top: 63px;
+      position: absolute;
+      font-size: 50px;
+    }
+    .po {
+      margin-top: 300px;
+      margin-left: -189px;
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img class="menu" src="/images/menu-line.png" />
+      <h1 class="logo">GoDaddy</h1>
+      <p>UNITED KINGDOM</p>
+    </div>
+    <div id="navbar">
+      <ul>
+        <li>
+          <a href="#">02070841810</a>
+        </li>
+        <li><a href="#">Help</a></li>
+        <li><a href="#">Sign In</a></li>
+        CD2D
+        <li>
+          <img
+            style="margin-right: 20px; cursor: pointer"
+            class="img"
+            src="/images/shopcart.png"
+            alt=""
+          />
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <div id="search">
+    <input class="search" type="text" placeholder="Find your perfect domain " />
+    <input class="finder" type="submit" value="Search Domain" />
+  </div>
+  <div class="rage">
+    <div class="main">
+      <h6 class="h6">Websites + Marketing</h6>
+
+      <h1 class="h1">create your <br />Website</h1>
+      <button class="finds" style="margin-top: 200px">Start for free</button>
+      <p class="po">No charge, no obligation, nothing to cancel.**</p>
+    </div>
+
+    <div class="side-bar">
+      <div class="promo">
+        <p class="h">Domain Names</p>
+        <h1
+          style="
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial,
+              sans-serif;
+          "
+        >
+          Grab a .co.uk for ‪£0.01‬/1st yr.
+        </h1>
+        <p class="h">
+          3-year purchase required. <br />
+          Additional year(s) ‪£11.99
+        </p>
+        <button class="find">Find Your Domain</button>
+        <p class="w">
+          Domains include free privacy protection <br />
+          forever <sup>+</sup>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="whole">
+    <div class="individual">
+      <p class="p">
+        .co.uk <br />
+        £0.01/1st yr
+      </p>
+    </div>
+    <div class="individual">
+      <p class="p">
+        .co.uk <br />
+        £0.01/1st yr
+      </p>
+    </div>
+    <div class="individual">
+      <p class="p">
+        .co.uk <br />
+        £0.01/1st yr
+      </p>
+    </div>
+    <div class="individual">
+      <p class="p">
+        .co.uk <br />
+        £0.01/1st yr
+      </p>
+    </div>
+    <div class="individual">
+      <p class="p">
+        .co.uk <br />
+        £0.01/1st yr
+      </p>
+    </div>
+    <div class="individual">
+      <p class="p">
+        .co.uk <br />
+        £0.01/1st yr
+      </p>
+    </div>
+    <div class="individual">
+      <p class="p">
+        .co.uk <br />
+        £0.01/1st yr
+      </p>
+    </div>
+    <div class="individual">
+      <p class="p">
+        .co.uk <br />
+        £0.01/1st yr
+      </p>
+    </div>
+  </div>
+  <footer></footer>
+</body>
